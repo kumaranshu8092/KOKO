@@ -2,13 +2,13 @@ class Sellers
 {
   String? sellerUID;
   String? sellerName;
-  String? sellerAvatarURL;
+  String? sellerAvatarUrl;
   String? sellerEmail;
 
   Sellers({
     this.sellerUID,
     this.sellerName,
-    this.sellerAvatarURL,
+    this.sellerAvatarUrl,
     this.sellerEmail,
   });
 
@@ -16,7 +16,7 @@ class Sellers
   {
     sellerUID = json["sellerUID"];
     sellerName = json["sellerName"];
-    sellerAvatarURL = json["sellerAvatarURL"];
+    sellerAvatarUrl = json["sellerAvatarUrl"];
     sellerEmail = json["sellerEmail"];
   }
 
@@ -25,7 +25,7 @@ class Sellers
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data["sellerUID"] = this.sellerUID;
     data["sellerName"] = this.sellerName;
-    data["sellerAvatarUrl"] = this.sellerAvatarURL;
+    data["sellerAvatarUrl"] = this.sellerAvatarUrl;
     data["sellerEmail"] = this.sellerEmail;
     return data;
   }

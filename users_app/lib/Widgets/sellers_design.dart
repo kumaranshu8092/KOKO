@@ -38,7 +38,7 @@ class _SellersDesignWidgetState extends State<SellersDesignWidget> {
                 color: Colors.grey.shade300,
               ),
               Image.network(
-                  widget.model!.sellerAvatarURL!,
+                  widget.model!.sellerAvatarUrl!,
                   height: 220.0,
                 fit: BoxFit.cover,
               ),
