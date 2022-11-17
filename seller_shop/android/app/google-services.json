@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "171918254094",
+    "project_id": "sellersapp-e99b7",
+    "storage_bucket": "sellersapp-e99b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171918254094:android:99eb387704d291e8be9c5f",
+        "android_client_info": {
+          "package_name": "com.koko.sellerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171918254094-nnm82vfoebi6gv77bm11tbpd44kbp79q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_i4aILHilE64E9N6U83SqFljaegC351U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171918254094-nnm82vfoebi6gv77bm11tbpd44kbp79q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
