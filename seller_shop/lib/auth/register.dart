@@ -53,6 +53,8 @@ class _RegisterScreenState extends State<RegisterScreen>
 
   getCurrentLocation() async
   {
+    await Geolocator.checkPermission();
+    await Geolocator.requestPermission();
     Position newPosition = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.high,
     );
