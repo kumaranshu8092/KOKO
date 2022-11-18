@@ -4,7 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:seller_shop/global/global.dart';
 import 'package:seller_shop/model/menus.dart';
 
-import '../main_Screens/itemsScreen.dart';
+import '../main_screens/items_screen.dart';
 
 class InfoDesignWidget extends StatefulWidget {
   Menus? model;

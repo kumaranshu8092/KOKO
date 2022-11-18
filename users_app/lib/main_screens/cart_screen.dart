@@ -7,7 +7,6 @@ import 'package:users_app/assistantMethods/total_amount.dart';
 import 'package:users_app/main_Screens/address_screen.dart';
 import 'package:users_app/models/items.dart';
 import 'package:users_app/splash_Screen/splash_screen.dart';
-import 'package:users_app/widgets/app_bar.dart';
 import 'package:users_app/widgets/cart_item_design.dart';
 import 'package:users_app/widgets/progress_bar.dart';
 import 'package:users_app/widgets/text_widget_header.dart';

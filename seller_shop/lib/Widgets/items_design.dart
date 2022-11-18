@@ -26,7 +26,7 @@ class _ItemsDesignWidgetState extends State<ItemsDesignWidget> {
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: Container(
-          height: 280,
+          height: 300,
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
@@ -60,8 +60,8 @@ class _ItemsDesignWidgetState extends State<ItemsDesignWidget> {
               Text(
                 widget.model!.shortInfo!,
                 style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: 12,
+                  color: Colors.black,
+                  fontSize: 15,
                 ),
               ),
               const SizedBox(

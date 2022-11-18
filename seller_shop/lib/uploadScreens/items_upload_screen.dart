@@ -230,110 +230,123 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen>
           ),
         ],
       ),
-      body: ListView(
-        children: [
-          uploading == true ? linearProgress() : const Text(""),
-          Container(
-            height: 230,
-            width: MediaQuery.of(context).size.width * 0.8,
-            child: Center(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: FileImage(
-                          File(imageXFile!.path)
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            uploading == true ? linearProgress() : const Text(""),
+            Container(
+              height: 230,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: AspectRatio(
+                  aspectRatio: 16/9,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: FileImage(
+                            File(imageXFile!.path)
+                        ),
+                        fit: BoxFit.cover,
                       ),
-                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-          const Divider(
-            color: Colors.amber,
-            thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.perm_device_information,  color: Colors.cyan,),
-            title: Container(
-              width: 250,
-              child: TextField(
-                style: const TextStyle(color: Colors.black),
-                controller: shortInfoController,
-                decoration: const InputDecoration(
-                  hintText: "info",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: InputBorder.none,
+            const Divider(
+              color: Colors.amber,
+              thickness: 1,
+            ),
+            Row(
+                children: [Padding(padding: EdgeInsets.only(left: 15)),
+                  const Icon(Icons.perm_device_information,  color: Colors.cyan,),
+                  SizedBox(width: 10,),
+                  Container(
+                    width: 250,
+                    child: TextField(
+                      style: const TextStyle(color: Colors.black),
+                      controller: shortInfoController,
+                      decoration: const InputDecoration(
+                        hintText: "info",
+                        hintStyle: TextStyle(color: Colors.grey),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            
+            const Divider(
+              color: Colors.amber,
+              thickness: 1,
+            ),
+            Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 15)),
+                  const Icon(Icons.title,  color: Colors.cyan,),
+                  SizedBox(width: 10,),
+                  Container(
+                    width: 250,
+                    child: TextField(
+                      style: const TextStyle(color: Colors.black),
+                      controller: titleController,
+                      decoration: const InputDecoration(
+                        hintText: "title",
+                        hintStyle: TextStyle(color: Colors.grey),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            const Divider(
+              color: Colors.amber,
+              thickness: 1,
+            ),
+            Row(
+                children: [Padding(padding: EdgeInsets.only(left: 15)),
+                  const Icon(Icons.description,  color: Colors.cyan,),
+                  SizedBox(width: 10,),
+                  Container(
+                    width: 250,
+                    child: TextField(
+                      style: const TextStyle(color: Colors.black),
+                      controller: descriptionController,
+                      decoration: const InputDecoration(
+                        hintText: "description",
+                        hintStyle: TextStyle(color: Colors.grey),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            const Divider(
+              color: Colors.amber,
+              thickness: 1,
+            ),
+            ListTile(
+              leading: const Icon(Icons.price_change,  color: Colors.cyan,),
+              title: Container(
+                width: 250,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  style: const TextStyle(color: Colors.black),
+                  controller: priceController,
+                  decoration: const InputDecoration(
+                    hintText: "price",
+                    hintStyle: TextStyle(color: Colors.grey),
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
             ),
-          ),
-          const Divider(
-            color: Colors.amber,
-            thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.title,  color: Colors.cyan,),
-            title: Container(
-              width: 250,
-              child: TextField(
-                style: const TextStyle(color: Colors.black),
-                controller: titleController,
-                decoration: const InputDecoration(
-                  hintText: "title",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: InputBorder.none,
-                ),
-              ),
+            const Divider(
+              color: Colors.amber,
+              thickness: 1,
             ),
-          ),
-          const Divider(
-            color: Colors.amber,
-            thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.description,  color: Colors.cyan,),
-            title: Container(
-              width: 250,
-              child: TextField(
-                style: const TextStyle(color: Colors.black),
-                controller: descriptionController,
-                decoration: const InputDecoration(
-                  hintText: "description",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-          const Divider(
-            color: Colors.amber,
-            thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.camera,  color: Colors.cyan,),
-            title: Container(
-              width: 250,
-              child: TextField(
-                keyboardType: TextInputType.number,
-                style: const TextStyle(color: Colors.black),
-                controller: priceController,
-                decoration: const InputDecoration(
-                  hintText: "price",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-          const Divider(
-            color: Colors.amber,
-            thickness: 1,
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

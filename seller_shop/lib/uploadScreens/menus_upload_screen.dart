@@ -222,12 +222,12 @@ class _MenusUploadScreenState extends State<MenusUploadScreen>
           ),
         ],
       ),
-      body: ListView(
+      body: Column(
         children: [
           uploading == true ? linearProgress() : const Text(""),
           Container(
-            height: 230,
-            width: MediaQuery.of(context).size.width * 0.8,
+            height: 250,
+            width: MediaQuery.of(context).size.width,
             child: Center(
               child: AspectRatio(
                 aspectRatio: 16/9,
@@ -248,40 +248,48 @@ class _MenusUploadScreenState extends State<MenusUploadScreen>
             color: Colors.amber,
             thickness: 1,
           ),
-          ListTile(
-            leading: const Icon(Icons.perm_device_information,  color: Colors.cyan,),
-            title: Container(
-              width: 250,
-              child: TextField(
-                style: const TextStyle(color: Colors.black),
-                controller: shortInfoController,
-                decoration: const InputDecoration(
-                  hintText: "menu info",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: InputBorder.none,
+          
+            Row(
+              children: [Padding(padding: EdgeInsets.only(left: 15)),
+                const Icon(Icons.menu,  color: Colors.cyan,),
+                SizedBox(width: 10,),
+                Container(
+                  width: 250,
+                  child: TextField(
+                    style: const TextStyle(color: Colors.black),
+                    controller: shortInfoController,
+                    decoration: const InputDecoration(
+                      hintText: "menu info",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      border: InputBorder.none,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ),
+          
           const Divider(
             color: Colors.amber,
             thickness: 1,
           ),
-          ListTile(
-            leading: const Icon(Icons.title,  color: Colors.cyan,),
-            title: Container(
-              width: 250,
-              child: TextField(
-                style: const TextStyle(color: Colors.black),
-                controller: titleController,
-                decoration: const InputDecoration(
-                  hintText: "menu title",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: InputBorder.none,
+          Row(
+              children: [Padding(padding: EdgeInsets.only(left: 15)),
+                const Icon(Icons.title,  color: Colors.cyan,),
+                SizedBox(width: 10,),
+                Container(
+                  width: 250,
+                  child: TextField(
+                    style: const TextStyle(color: Colors.black),
+                    controller: titleController,
+                    decoration: const InputDecoration(
+                      hintText: "menu title",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      border: InputBorder.none,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ),
           const Divider(
             color: Colors.amber,
             thickness: 1,

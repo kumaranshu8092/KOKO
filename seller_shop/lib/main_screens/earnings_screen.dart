@@ -68,6 +68,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
                 height: 40.0,
               ),
               GestureDetector(
+                
                 onTap: () {
                   Navigator.push(
                       context,
@@ -76,7 +77,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
                 },
                 child: const Card(
                   color: Colors.white54,
-                  margin: EdgeInsets.symmetric(vertical: 40, horizontal: 140),
+                  margin: EdgeInsets.symmetric(vertical: 40, horizontal: 120),
                   child: ListTile(
                     leading: Icon(
                       Icons.arrow_back,
