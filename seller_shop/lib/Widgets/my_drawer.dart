@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:seller_shop/auth/auth_screen.dart';
 import 'package:seller_shop/global/global.dart';
 import 'package:seller_shop/main_Screens/home_screen.dart';
-import 'package:seller_shop/main_screens/earnings_screen.dart';
-import 'package:seller_shop/main_screens/history_screen.dart';
 import 'package:seller_shop/main_screens/new_orders_screen.dart';
 
 
@@ -41,7 +39,7 @@ class MyDrawer extends StatelessWidget
                 const SizedBox(height: 10,),
                 Text(
                     sharedPreferences!.getString("name")!,
-                  style: TextStyle(color: Colors.black, fontSize: 20, fontFamily: "Train"),
+                  style: const TextStyle(color: Colors.black, fontSize: 20, fontFamily: "Train"),
                 ),
               ],
             ),
@@ -75,26 +73,26 @@ class MyDrawer extends StatelessWidget
                   color: Colors.grey,
                   thickness: 2,
                 ),
-                ListTile(
-                  leading: const Icon(Icons.monetization_on, color: Colors.black,),
-                  title: const Text(
-                    "My Earnings",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  onTap: ()
-                  {
-                    Navigator.push(context, MaterialPageRoute(builder: (c)=> const EarningsScreen()));
-                  },
-                ),
-                const Divider(
-                  height: 10,
-                  color: Colors.grey,
-                  thickness: 2,
-                ),
+                // ListTile(
+                //   leading: const Icon(Icons.monetization_on, color: Colors.black,),
+                //   title: const Text(
+                //     "My Earnings",
+                //     style: TextStyle(color: Colors.black),
+                //   ),
+                //   onTap: ()
+                //   {
+                //     Navigator.push(context, MaterialPageRoute(builder: (c)=> const EarningsScreen()));
+                //   },
+                // ),
+                // const Divider(
+                //   height: 10,
+                //   color: Colors.grey,
+                //   thickness: 2,
+                // ),
                 ListTile(
                   leading: const Icon(Icons.reorder, color: Colors.black,),
                   title: const Text(
-                    "New orders",
+                    "Order History",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: ()
@@ -107,22 +105,22 @@ class MyDrawer extends StatelessWidget
                   color: Colors.grey,
                   thickness: 2,
                 ),
-                ListTile(
-                  leading: const Icon(Icons.local_shipping, color: Colors.black,),
-                  title: const Text(
-                    "History - Orders",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  onTap: ()
-                  {
-                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  HistoryScreen()));
-                  },
-                ),
-                const Divider(
-                  height: 10,
-                  color: Colors.grey,
-                  thickness: 2,
-                ),
+                // ListTile(
+                //   leading: const Icon(Icons.local_shipping, color: Colors.black,),
+                //   title: const Text(
+                //     "History - Orders",
+                //     style: TextStyle(color: Colors.black),
+                //   ),
+                //   onTap: ()
+                //   {
+                //     Navigator.push(context, MaterialPageRoute(builder: (c)=>  HistoryScreen()));
+                //   },
+                // ),
+                // const Divider(
+                //   height: 10,
+                //   color: Colors.grey,
+                //   thickness: 2,
+                // ),
                 ListTile(
                   leading: const Icon(Icons.exit_to_app, color: Colors.black,),
                   title: const Text(

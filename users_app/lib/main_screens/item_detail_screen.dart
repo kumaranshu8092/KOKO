@@ -27,59 +27,59 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen>
   {
     return Scaffold(
       appBar: MyAppBar(sellerUID: widget.model!.sellerUID),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.network(widget.model!.thumbnailUrl.toString()),
-
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: NumberInputPrefabbed.roundedButtons(
-              controller: counterTextEditingController,
-              incDecBgColor: Colors.amber,
-              min: 1,
-              max: 9,
-              initialValue: 1,
-              buttonArrangement: ButtonArrangement.incRightDecLeft,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.network(widget.model!.thumbnailUrl.toString()),
+          
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: NumberInputPrefabbed.roundedButtons(
+                controller: counterTextEditingController,
+                incDecBgColor: Colors.amber,
+                min: 1,
+                max: 9,
+                initialValue: 1,
+                buttonArrangement: ButtonArrangement.incRightDecLeft,
+              ),
             ),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              widget.model!.title.toString(),
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                widget.model!.title.toString(),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
             ),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              widget.model!.longDescription.toString(),
-              textAlign: TextAlign.justify,
-              style: const TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
+          
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                widget.model!.longDescription.toString(),
+                textAlign: TextAlign.justify,
+                style: const TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
+              ),
             ),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-            "₹ " + widget.model!.price.toString()  ,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+              "₹ " + widget.model!.price.toString()  ,
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              ),
             ),
-          ),
-
-          const SizedBox(height: 10,),
-
-          Expanded(
-            child: Center(
+          
+            const SizedBox(height: 10,),
+          
+            Center(
               child: InkWell(
                 onTap: ()
                 {
                   int itemCounter = int.parse(counterTextEditingController.text);
-          
+            
                   List<String> separateItemIDsList = separateItemIDs();
-          
+            
                   //1.check if item exist already in cart
                   separateItemIDsList.contains(widget.model!.itemID)
                       ? Fluttertoast.showToast(msg: "Item is already in Cart.")
@@ -115,8 +115,8 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen>
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

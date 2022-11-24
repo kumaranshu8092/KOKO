@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:seller_shop/global/global.dart';
 import 'package:seller_shop/main_screens/home_screen.dart';
-import 'package:seller_shop/splash_Screen/splash_screen.dart';
 
 class EarningsScreen extends StatefulWidget {
   const EarningsScreen({Key? key}) : super(key: key);
